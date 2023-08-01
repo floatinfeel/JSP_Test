@@ -12,49 +12,22 @@
         <title>Welcome Page</title>
     </head>
     <body>
-        
+        <%@ page import="java.util.ArrayList" %>
+         <%@ page import="packagelog.Reports" %>
         <h3>Welcome, <%= session.getAttribute("userid") %> </h3>
         
 <br/><br/><!-- comment -->
         <table border="1">
             <tr>
-                <th>
+               <th>
                     Department
                 </th>
-                <%
-                    foreach(Reports report:reports){
-                    
-                %>
-                        <td>
-                            <%= report.Department%>
-                        </td>
-                <%
-                    }
-                %>
                 <th>
                     Student ID
                 </th>
-                <%
-                    foreach(Reports report:reports){
-                %>
-                        <td>
-                           <%= report.StudentID %>
-                        </td>
-                <%
-                    }
-                %>
                 <th>
                     Marks
                 </th>
-                <%
-                    foreach(Reports report:reports){
-                %>
-                        <td>
-                           <%= report.Marks %>
-                        </td>
-                <%
-                    }
-                %>
                 <th>
                     Pass %
                 </th>
